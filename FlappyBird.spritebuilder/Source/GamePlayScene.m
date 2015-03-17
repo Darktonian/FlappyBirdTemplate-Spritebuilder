@@ -34,4 +34,8 @@
   [character flap];
 }
 
+- (void)showScore {
+
+}
+
 @end
