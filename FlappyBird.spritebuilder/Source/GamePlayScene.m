@@ -11,11 +11,20 @@
   [physicsNode addChild:character];
  
   [self addObstacle];
+  
+  timeSinceObstacle = 0.f;
 }
 
 -(void)update:(CCTime)delta
 {
-    // put update code here
+  // put update code here
+  timeSinceObstacle += delta;
+  if (timeSinceObstacle > 2.f) {
+    
+    [self addObstacle];
+    
+    timeSinceObstacle = 0.f;
+  }
 }
 
 // put new methods here
